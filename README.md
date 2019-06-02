@@ -10,7 +10,8 @@ This runs `s3 sync --exact-timestamps --delete` every minute
 docker run --init \
   -e "AWS_ACCESS_KEY_ID=xxxxxxxxxx" \
   -e "AWS_SECRET_ACCESS_KEY=xxxxxxxxxx" \
-  -e "S3_BUCKET=YOURBUCKET" \
-  -e "DEST_DIR=/tmp/dir/" \
+  -e "S3_BUCKET=your-bucket" \
+  -e "LOCAL_DIR=/tmp/dir/" \
+  -e "SYNC_TYPE=PULL" \
   cohalz/cron-s3-sync
 ```
