@@ -1,5 +1,5 @@
 # docker-cron-s3-sync
-a docker s3 sync cron sidecar container
+This runs `s3 sync --exact-timestamps --delete` every minute
 
 ## Docker Hub
 - https://hub.docker.com/r/cohalz/cron-s3-sync
