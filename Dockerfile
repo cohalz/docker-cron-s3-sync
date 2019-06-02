@@ -1,9 +1,6 @@
 FROM alpine:latest
 
-RUN apk --update add \
-    python \
-    curl \
-    groff && \
+RUN apk --update add python curl groff && \
     curl https://bootstrap.pypa.io/get-pip.py | python && \
     pip install awscli
 
