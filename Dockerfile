@@ -1,7 +1,7 @@
 FROM alpine:latest
 
-RUN apk add --no-cache python && \
-    wget -O - https://bootstrap.pypa.io/get-pip.py | python && \
+RUN apk add --no-cache python3 && \
+    wget -O - https://bootstrap.pypa.io/get-pip.py | python3 && \
     pip install awscli
 
 COPY s3-sync.sh /usr/local/bin
