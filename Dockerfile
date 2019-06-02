@@ -1,6 +1,8 @@
-FROM python:3-alpine
+FROM alpine:latest
 
-RUN pip install awscli
+RUN apk --update add python curl groff && \
+    curl https://bootstrap.pypa.io/get-pip.py | python && \
+    pip install awscli
 
 COPY s3-sync.sh /usr/local/bin
 COPY crontab /var/spool/cron/crontabs/root
